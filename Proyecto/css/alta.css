@@ -1,0 +1,95 @@
+main {
+    display: inline-block;
+    width: 65%;
+}
+
+.obligatorio {
+    color: red;
+}
+
+.col-5 {
+    display: inline-block;
+    width: 48%;
+}
+
+.datos .col-5 label {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.datos .col-5 input {
+    display: block;
+    width: 95%;
+}
+
+.col-s {
+    padding-left: 1%;
+}
+
+.bloque {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#departamento {
+    width: 97%;
+}
+
+.col-10 {
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 1%;
+}
+
+#comentario {
+    width: 95.5%;
+}
+
+.boton-i {
+    display: inline-block;
+    width: 49%;
+    margin: 10px 0;
+}
+
+.boton-i input {
+    margin-left: 5px;
+}
+
+.boton-l {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    margin: 10px 0;
+}
+
+aside {
+    float: right;
+    width: 30%;
+}
+
+aside table {
+    width: 100%;
+}
+
+table,
+th,
+td {
+    text-align: center;
+    border: 1px solid black;
+}
+
+aside table th {
+    width: 24%;
+}
+
+aside tr a {
+    background: #3F95E0;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.mayus {
+    text-transform: uppercase;
+}

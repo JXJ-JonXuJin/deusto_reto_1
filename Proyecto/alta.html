@@ -6,73 +6,161 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nueva Incidencia</title>
+    <link rel="stylesheet" href="css/parteFija.css">
+    <link rel="stylesheet" href="css/alta.css">
 </head>
 
 <body>
     <header>
-        <nav>
+        <div>
+            <a href="index.html" target="_self">
+                <div id="logo"></div>
+            </a>
+        </div>
+        <div>
             <ul>
                 <li><a href="index.html" target="_self">Inicio</a></li>
                 <li><a href="alta.html" target="_self">Alta Incidencia</a></li>
                 <li><a href="wiki.html" target="_self">Wiki</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
+    <nav>
+        <a href="index.html" target="_self">
+            <div id="banner"></div>
+        </a>
+    </nav>
     <main>
-        <article>
-            <h1>Alta nueva Incidencia</h1>
-            <p>Aqu&iacute; puedes dar de alta nuevas incidencias.</p>
-            <section>
-                <form action="servidor.php" method="post">
-                    <fieldset>
-                        <legend>Datos identificativos</legend>
-                        <label for="titulo">Titulo:</label>
-                        <input type="text" name="titulo" id="titulo">
-                        <label for="fecha">Fecha:</label>
-                        <input type="date" name="fecha" id="fecha">
-                        <label for="tecnico">T&eacute;cnico:</label>
-                        <input type="text" name="tecnico" id="tecnico">
-                        <label for="email">email:</label>
-                        <input type="email" name="email" id="email">
-                        <label for="tel">Tel&eacute;fono:</label>
-                        <input type="phone" name="tel" id="tel">
-                    </fieldset>
-                    <fieldset>
-                        <legend>Informe</legend>
-                        <label>Prioridad:</label>
-                        <input type="radio" name="prioridad" id="alto" value="alto"><label for="alto">Alta prioridad</label>
-                        <input type="radio" name="prioridad" id="medio" value="medio" checked><label for="medio">Prioridad media</label>
-                        <input type="radio" name="prioridad" id="bajo" value="bajo"><label for="bajo">Prioridad baja</label>
-                        <label for="departamento">Departamento:</label>
-                        <select name="departamento" id="departamento">
-                            <optgroup label="Nivel 1">
-                                <option>Jefe proyecto</option>
-                                <option selected>Jefe Equipo</option>
-                                <option>Jefefazo</option>
-                            </optgroup>
-                            <optgroup label="Nivel 2">
-                                <option>Contabilidad</option>
-                                <option>RRHH</option>
-                                <option>Sindicato</option>
-                            </optgroup>
-                            <optgroup label="Nivel 3">
-                                <option>Operadores</option>
-                                <option>Compras</option>
-                                <option>Ventas</option>
-                            </optgroup>
-                        </select>
-                        <label for="comentario">Especifique su incidencia:</label>
-                        <textarea name="comentario" id="comentario" rows="10" cols="50">Incidencia...</textarea>
-                    </fieldset>
-                    <label for="copia">¿Copia a mi?</label>
-                    <input type="checkbox" name="copia" id="copia" value="s">
-                    <input type="submit" value="Enviar">
-                </form>
-            </section>
-        </article>
+        <div>
+            <article>
+                <h1>Alta nueva Incidencia</h1>
+                <p>Aqu&iacute; puedes dar de alta nuevas incidencias.</p>
+                <section>
+                    <form action="servidor.php" method="post">
+                        <fieldset class="datos">
+                            <legend>Datos identificativos</legend>
+                            <div class="col-5 col-s">
+                                <label class="obligatorio">*</label>
+                                <label for="titulo">Titulo:</label>
+                                <input type="text" name="titulo" id="titulo" autofocus required>
+                            </div>
+                            <div class="col-5 col-s">
+                                <label class="obligatorio">Atenci&oacute;n: los elementos marcados con * obligatorios.</label>
+                            </div>
+                            <div class="col-5 col-s">
+                                <label class="obligatorio">*</label>
+                                <label for="fecha">Fecha:</label>
+                                <input type="date" name="fecha" id="fecha" required>
+                            </div>
+                            <div class="col-5 col-s">
+                                <label class="obligatorio">*</label>
+                                <label for="tecnico">T&eacute;cnico:</label>
+                                <input type="text" name="tecnico" id="tecnico" required>
+                            </div>
+                            <div class="col-5 col-s">
+                                <label class="obligatorio">*</label>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
+                            <div class="col-5 col-s">
+                                <label for="tel">Tel&eacute;fono:</label>
+                                <input type="phone" name="tel" id="tel">
+                            </div>
+                        </fieldset>
+                        <fieldset class="informe">
+                            <legend>Informe</legend>
+                            <div class="col-5 col-s">
+                                <label class="bloque">Prioridad:</label>
+                                <input type="radio" name="prioridad" id="alto" value="alto"><label for="alto">Alta prioridad</label>
+                                <input type="radio" name="prioridad" id="medio" value="medio" checked><label for="medio">Prioridad media</label>
+                                <input type="radio" name="prioridad" id="bajo" value="bajo"><label for="bajo">Prioridad baja</label>
+                            </div>
+                            <div class="col-5 col-s">
+                                <label class="bloque" for="departamento">Departamento:</label>
+                                <select name="departamento" id="departamento">
+                                    <optgroup label="Nivel 1">
+                                        <option>Jefe proyecto</option>
+                                        <option selected>Jefe Equipo</option>
+                                        <option>Jefefazo</option>
+                                    </optgroup>
+                                    <optgroup label="Nivel 2">
+                                        <option>Contabilidad</option>
+                                        <option>RRHH</option>
+                                        <option>Sindicato</option>
+                                    </optgroup>
+                                    <optgroup label="Nivel 3">
+                                        <option>Operadores</option>
+                                        <option>Compras</option>
+                                        <option>Ventas</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="col-10">
+                                <label class="obligatorio">*</label><label for="comentario">Especifique su incidencia:</label>
+                                <textarea name="comentario" id="comentario" rows="10" required></textarea>
+                            </div>
+                        </fieldset>
+                        <div class="col-10">
+                            <label for="copia">¿Copia a mi?</label>
+                            <input type="checkbox" name="copia" id="copia" value="s">
+                        </div>
+                        <div class="boton-i">
+                            <input type="reset" value="Cancelar">
+                        </div>
+                        <div class="boton-l">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </section>
+            </article>
+        </div>
     </main>
+    <aside>
+        <section>
+            <h2>&Uacute;ltimas incidencias</h2>
+            <table>
+                <caption>5 &uacute;ltimas incidencias</caption>
+                <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Prioridad</th>
+                    <th scope="col">Acci&oacute;n</th>
+                </tr>
+                <tr>
+                    <td>01/01/2021</td>
+                    <td>Error 400</td>
+                    <td class="mayus">alta</td>
+                    <td><a href="detalle.html" target="_self">Acceder</a></td>
+                </tr>
+                <tr>
+                    <td>01/01/2021</td>
+                    <td>Error 400</td>
+                    <td class="mayus">baja</td>
+                    <td><a href="detalle.html" target="_self">Acceder</a></td>
+                </tr>
+                <tr>
+                    <td>01/01/2021</td>
+                    <td>Error 400</td>
+                    <td class="mayus">media</td>
+                    <td><a href="detalle.html" target="_self">Acceder</a></td>
+                </tr>
+                <tr>
+                    <td>01/01/2021</td>
+                    <td>Error 400</td>
+                    <td class="mayus">alta</td>
+                    <td><a href="detalle.html" target="_self">Acceder</a></td>
+                </tr>
+                <tr>
+                    <td>01/01/2021</td>
+                    <td>Error 400</td>
+                    <td class="mayus">media</td>
+                    <td><a href="detalle.html" target="_self">Acceder</a></td>
+                </tr>
+            </table>
+        </section>
+    </aside>
     <footer>
-        <p>Proyecto desarrollado por Jon Xu Jin</p>
+        <p>Proyecto desarrollado por Jon Xu Jin. Pueden contactar conmigo desde <a href="mailto:jonxu@opendeusto.es?subject=Contacto%20Web">aqu&iacute;</a>.</p>
     </footer>
 </body>
 
