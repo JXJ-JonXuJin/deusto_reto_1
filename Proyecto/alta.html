@@ -31,53 +31,52 @@
         </a>
     </nav>
     <main>
-        <div>
-            <article>
-                <h1>Alta nueva Incidencia</h1>
-                <p>Aqu&iacute; puedes dar de alta nuevas incidencias.</p>
-                <section>
-                    <form action="servidor.php" method="post">
-                        <fieldset class="datos">
-                            <legend>Datos identificativos</legend>
-                            <div class="col-5 col-s">
-                                <label class="obligatorio">*</label>
-                                <label for="titulo">Titulo:</label>
-                                <input type="text" name="titulo" id="titulo" autofocus required>
-                            </div>
-                            <div class="col-5 col-s">
-                                <label class="obligatorio">Atenci&oacute;n: los elementos marcados con * obligatorios.</label>
-                            </div>
-                            <div class="col-5 col-s">
-                                <label class="obligatorio">*</label>
-                                <label for="fecha">Fecha:</label>
-                                <input type="date" name="fecha" id="fecha" required>
-                            </div>
-                            <div class="col-5 col-s">
-                                <label class="obligatorio">*</label>
-                                <label for="tecnico">T&eacute;cnico:</label>
-                                <input type="text" name="tecnico" id="tecnico" required>
-                            </div>
-                            <div class="col-5 col-s">
-                                <label class="obligatorio">*</label>
-                                <label for="email">Email:</label>
-                                <input type="email" name="email" id="email" required>
-                            </div>
-                            <div class="col-5 col-s">
-                                <label for="tel">Tel&eacute;fono:</label>
-                                <input type="phone" name="tel" id="tel">
-                            </div>
-                        </fieldset>
-                        <fieldset class="informe">
-                            <legend>Informe</legend>
-                            <div class="col-5 col-s">
-                                <label class="bloque">Prioridad:</label>
-                                <input type="radio" name="prioridad" id="alto" value="alto"><label for="alto">Alta prioridad</label>
-                                <input type="radio" name="prioridad" id="medio" value="medio" checked><label for="medio">Prioridad media</label>
-                                <input type="radio" name="prioridad" id="bajo" value="bajo"><label for="bajo">Prioridad baja</label>
-                            </div>
-                            <div class="col-5 col-s">
-                                <label class="bloque" for="departamento">Departamento:</label>
-                                <select name="departamento" id="departamento">
+        <article>
+            <h1>Alta nueva Incidencia</h1>
+            <p>Aqu&iacute; puedes dar de alta nuevas incidencias.</p>
+            <section>
+                <form action="servidor.php" method="post">
+                    <fieldset class="datos">
+                        <legend>Datos identificativos</legend>
+                        <div class="col-5 col-s">
+                            <label class="obligatorio">*</label>
+                            <label for="titulo">Titulo:</label>
+                            <input type="text" name="titulo" id="titulo" autofocus required>
+                        </div>
+                        <div class="col-5 col-s">
+                            <label class="obligatorio">Atenci&oacute;n: los elementos marcados con * son obligatorios.</label>
+                        </div>
+                        <div class="col-5 col-s">
+                            <label class="obligatorio">*</label>
+                            <label for="fecha">Fecha:</label>
+                            <input type="date" name="fecha" id="fecha" required>
+                        </div>
+                        <div class="col-5 col-s">
+                            <label class="obligatorio">*</label>
+                            <label for="tecnico">T&eacute;cnico:</label>
+                            <input type="text" name="tecnico" id="tecnico" required>
+                        </div>
+                        <div class="col-5 col-s">
+                            <label class="obligatorio">*</label>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="col-5 col-s">
+                            <label for="tel">Tel&eacute;fono:</label>
+                            <input type="phone" name="tel" id="tel">
+                        </div>
+                    </fieldset>
+                    <fieldset class="informe">
+                        <legend>Informe</legend>
+                        <div class="col-5 col-s">
+                            <label class="bloque">Prioridad:</label>
+                            <input type="radio" name="prioridad" id="alto" value="alto"><label for="alto">Alta prioridad</label>
+                            <input type="radio" name="prioridad" id="medio" value="medio" checked><label for="medio">Prioridad media</label>
+                            <input type="radio" name="prioridad" id="bajo" value="bajo"><label for="bajo">Prioridad baja</label>
+                        </div>
+                        <div class="col-5 col-s">
+                            <label class="bloque" for="departamento">Departamento:</label>
+                            <select name="departamento" id="departamento">
                                     <optgroup label="Nivel 1">
                                         <option>Jefe proyecto</option>
                                         <option selected>Jefe Equipo</option>
@@ -94,68 +93,71 @@
                                         <option>Ventas</option>
                                     </optgroup>
                                 </select>
-                            </div>
-                            <div class="col-10">
-                                <label class="obligatorio">*</label><label for="comentario">Especifique su incidencia:</label>
-                                <textarea name="comentario" id="comentario" rows="10" required></textarea>
-                            </div>
-                        </fieldset>
+                        </div>
                         <div class="col-10">
-                            <label for="copia">¿Copia a mi?</label>
-                            <input type="checkbox" name="copia" id="copia" value="s">
+                            <label class="obligatorio">*</label><label for="comentario">Especifique su incidencia:</label>
+                            <textarea name="comentario" id="comentario" rows="10" required></textarea>
                         </div>
-                        <div class="boton-i">
-                            <input type="reset" value="Cancelar">
-                        </div>
-                        <div class="boton-l">
-                            <input type="submit" value="Enviar">
-                        </div>
-                    </form>
-                </section>
-            </article>
-        </div>
+                    </fieldset>
+                    <div class="col-10">
+                        <label for="copia">¿Enviar copia a mi mismo?</label>
+                        <input type="checkbox" name="copia" id="copia" value="s">
+                    </div>
+                    <div class="boton-i">
+                        <input type="reset" value="Cancelar">
+                    </div>
+                    <div class="boton-l">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </section>
+        </article>
     </main>
     <aside>
         <section>
             <h2>&Uacute;ltimas incidencias</h2>
             <table>
                 <caption>5 &uacute;ltimas incidencias</caption>
-                <tr>
-                    <th scope="col">Fecha</th>
-                    <th scope="col">Titulo</th>
-                    <th scope="col">Prioridad</th>
-                    <th scope="col">Acci&oacute;n</th>
-                </tr>
-                <tr>
-                    <td>01/01/2021</td>
-                    <td>Error 400</td>
-                    <td class="mayus">alta</td>
-                    <td><a href="detalle.html" target="_self">Acceder</a></td>
-                </tr>
-                <tr>
-                    <td>01/01/2021</td>
-                    <td>Error 400</td>
-                    <td class="mayus">baja</td>
-                    <td><a href="detalle.html" target="_self">Acceder</a></td>
-                </tr>
-                <tr>
-                    <td>01/01/2021</td>
-                    <td>Error 400</td>
-                    <td class="mayus">media</td>
-                    <td><a href="detalle.html" target="_self">Acceder</a></td>
-                </tr>
-                <tr>
-                    <td>01/01/2021</td>
-                    <td>Error 400</td>
-                    <td class="mayus">alta</td>
-                    <td><a href="detalle.html" target="_self">Acceder</a></td>
-                </tr>
-                <tr>
-                    <td>01/01/2021</td>
-                    <td>Error 400</td>
-                    <td class="mayus">media</td>
-                    <td><a href="detalle.html" target="_self">Acceder</a></td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Prioridad</th>
+                        <th scope="col">Acci&oacute;n</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">alta</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">baja</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">media</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">alta</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">media</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                </tbody>
             </table>
         </section>
     </aside>

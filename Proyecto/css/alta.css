@@ -1,15 +1,55 @@
-main {
-    display: inline-block;
-    width: 65%;
+@media only screen and (min-width: 514px) {
+    /* For tablets: */
+    main {
+        display: inline-block;
+        width: 100%;
+    }
+    aside {
+        /*float: right;*/
+        width: 100%;
+    }
+    .col-5 {
+        display: inline-block;
+        width: 48%;
+    }
+    .col-10 {
+        display: inline-block;
+        width: 100%;
+        margin-top: 10px;
+        padding-left: 1%;
+    }
+    .col-s {
+        padding-left: 1%;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    /* For desktop: */
+    main {
+        display: inline-block;
+        width: 65%;
+    }
+    aside {
+        float: right;
+        width: 30%;
+    }
+    .col-5 {
+        display: inline-block;
+        width: 48%;
+    }
+    .col-10 {
+        display: inline-block;
+        width: 100%;
+        margin-top: 10px;
+        padding-left: 1%;
+    }
+    .col-s {
+        padding-left: 1%;
+    }
 }
 
 .obligatorio {
     color: red;
-}
-
-.col-5 {
-    display: inline-block;
-    width: 48%;
 }
 
 .datos .col-5 label {
@@ -22,10 +62,6 @@ main {
     width: 95%;
 }
 
-.col-s {
-    padding-left: 1%;
-}
-
 .bloque {
     display: block;
     margin-bottom: 5px;
@@ -33,13 +69,6 @@ main {
 
 #departamento {
     width: 97%;
-}
-
-.col-10 {
-    display: inline-block;
-    width: 100%;
-    margin-top: 10px;
-    padding-left: 1%;
 }
 
 #comentario {
@@ -63,27 +92,15 @@ main {
     margin: 10px 0;
 }
 
-aside {
-    float: right;
-    width: 30%;
-}
-
 aside table {
     width: 100%;
 }
 
-table,
-th,
-td {
-    text-align: center;
-    border: 1px solid black;
-}
-
-aside table th {
+aside table thead tr th {
     width: 24%;
 }
 
-aside tr a {
+aside table tbody tr td a {
     background: #3F95E0;
     color: #fff;
     text-decoration: none;
@@ -92,4 +109,12 @@ aside tr a {
 
 .mayus {
     text-transform: uppercase;
+}
+
+input:required {
+    background-color: rgb(233, 143, 143);
+}
+
+input:valid {
+    background-color: rgb(255, 255, 255);
 }
