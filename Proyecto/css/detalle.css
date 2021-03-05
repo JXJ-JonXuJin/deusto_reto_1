@@ -88,6 +88,12 @@
     color: red;
 }
 
-#estado {
+#estado,
+#tecnico {
     width: 98.5%;
+}
+
+#incidencia {
+    width: 96%;
+    height: 250px;
 }
