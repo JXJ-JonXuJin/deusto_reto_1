@@ -1,0 +1,20 @@
+/* Para no duplicar codigos y quiero que las tablas tengan las mismas apariencias, lo pongo separado para las paginas con tablas */
+
+table,
+th,
+td {
+    text-align: center;
+    border: 1px solid black;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgb(194, 190, 190);
+}
+
+table tbody tr:hover {
+    background-color: rgb(39, 215, 238);
+}

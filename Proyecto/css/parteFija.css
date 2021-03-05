@@ -66,25 +66,3 @@ footer p {
     text-align: center;
     color: white;
 }
-
-
-/* La parte de las tablas, como en mi proyecto incluye una tabla en todas las páginas, lo dejo aquí para no duplicar códigos*/
-
-table,
-th,
-td {
-    text-align: center;
-    border: 1px solid black;
-}
-
-table tbody tr:nth-child(odd) {
-    background-color: white;
-}
-
-table tbody tr:nth-child(even) {
-    background-color: rgb(194, 190, 190);
-}
-
-table tbody tr:hover {
-    background-color: rgb(39, 215, 238);
-}

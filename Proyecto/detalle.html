@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5">
-    <title>Detalles del error</title>
     <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico" sizes="16x16 32x32">
+    <title>Detalles del error</title>
     <link rel="stylesheet" href="css/parteFija.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/tabla.css">
+    <link rel="stylesheet" href="css/detalle.css">
 </head>
 
 <body>
@@ -32,42 +34,144 @@
         </a>
     </nav>
     <main>
-        <div>
-            <article>
-                <h1>Wiki de los c&oacute;digos de errores comunes:</h1>
-                <p>Aqu&iacute; podr&aacute;s encontrar una lista de los c&oacute;digos de errores m&aacute;s frecuentes, su motivo y su soluci&oacute;n.</p>
-                <section>
-                    <table>
-                        <caption>Tabla de Informaci&oacute;n de los errores</caption>
-                        <tr>
-                            <th scope="col">Error</th>
-                            <th scope="col">Motivo</th>
-                            <th scope="col">Soluci&oacute;n</th>
-                        </tr>
-                        <tr>
-                            <td>300 - 399</td>
-                            <td>Redirecciones</td>
-                            <td>El directorio o los recursos han sido movidos a otra ubicaci&oacute;n. No te preocupes, te redirigiremos a la nueva ruta. Procura usar en un futuro el nuevo enlace.</td>
-                        </tr>
-                        <tr>
-                            <td>400 - 499</td>
-                            <td>Errores por parte del cliente</td>
-                            <td>El servidor no ha podido procesar su solicitud, revisa los datos proporcionados e int&eacute;ntelo de nuevo. Si el error persiste, contacte con el SAT</td>
-                        </tr>
-                        <tr>
-                            <td>500 - 599</td>
-                            <td>Errores por parte del servidor</td>
-                            <td>Hay un problema con el servidor, por favor, int&eacute;ntelo de nuevo m&aacute;s tarde.</td>
-                        </tr>
-                    </table>
-                </section>
-            </article>
-        </div>
+        <article>
+            <h1>Detalle de la Incidencia</h1>
+            <p>Aqu&iacute; puedes modificar el estado de una incidencia.</p>
+            <p>No se permite cambios en los datos identificativos, a excepción del tel&eacute;fono.</p>
+            <section>
+                <form action="servidor.php" method="post">
+                    <fieldset class="datos">
+                        <legend>Datos identificativos</legend>
+                        <div class="col-5 col-s">
+                            <label for="titulo">Titulo:</label>
+                            <input type="text" name="titulo" id="titulo" required disabled value="Error 400">
+                        </div>
+                        <div class="col-5 col-s">
+                            <label class="obligatorio">Atenci&oacute;n: los elementos marcados con * son obligatorios.</label>
+                        </div>
+                        <div class="col-5 col-s">
+                            <label for="fecha">Fecha:</label>
+                            <input type="date" name="fecha" id="fecha" required disabled value="2021-01-02">
+                        </div>
+                        <div class="col-5 col-s">
+                            <label for="tecnico">T&eacute;cnico:</label>
+                            <input type="text" name="tecnico" id="tecnico" required disabled value="Jon Xu">
+                        </div>
+                        <div class="col-5 col-s">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" required disabled value="123@opendeusto.es">
+                        </div>
+                        <div class="col-5 col-s">
+                            <label for="tel">Tel&eacute;fono:</label>
+                            <input type="phone" name="tel" id="tel" value="999999999">
+                        </div>
+                    </fieldset>
+                    <fieldset class="informe">
+                        <legend>Informe</legend>
+                        <div class="col-5 col-s">
+                            <label class="bloque">Prioridad:</label>
+                            <input type="radio" name="prioridad" id="alto" value="alto"><label for="alto">Alta prioridad</label>
+                            <input type="radio" name="prioridad" id="medio" value="medio" checked><label for="medio">Prioridad media</label>
+                            <input type="radio" name="prioridad" id="bajo" value="bajo"><label for="bajo">Prioridad baja</label>
+                        </div>
+                        <div class="col-5 col-s">
+                            <label class="bloque" for="departamento">Departamento:</label>
+                            <select name="departamento" id="departamento">
+                                    <optgroup label="Nivel 1">
+                                        <option selected>Jefe proyecto</option>
+                                        <option>Jefe Equipo</option>
+                                        <option>Jefefazo</option>
+                                    </optgroup>
+                                    <optgroup label="Nivel 2">
+                                        <option>Contabilidad</option>
+                                        <option>RRHH</option>
+                                        <option>Sindicato</option>
+                                    </optgroup>
+                                    <optgroup label="Nivel 3">
+                                        <option>Operadores</option>
+                                        <option>Compras</option>
+                                        <option>Ventas</option>
+                                    </optgroup>
+                                </select>
+                        </div>
+                        <div class="col-10">
+                            <label class="obligatorio">*</label><label for="comentario">Especifique su incidencia:</label>
+                            <textarea name="comentario" id="comentario" rows="10" required>No me permite el acceso para el alta de un cliente.</textarea>
+                        </div>
+                    </fieldset>
+                    <div class="col-10 ">
+                        <label class="bloque" for="estado">Estado:</label>
+                        <select name="estado" id="estado">
+                                <option>Resuelto</option>
+                                <option selected>Pendiente</option>
+                                <option>En estudio</option>
+                        </select>
+                    </div>
+                    <div class="col-10">
+                        <label for="copia">¿Enviar copia al t&eacute;cnico de la incidencia?</label>
+                        <input type="checkbox" name="copia" id="copia" value="s" checked>
+                    </div>
+                    <div class="boton-i">
+                        <input type="reset" value="Borrar">
+                    </div>
+                    <div class="boton-l">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </section>
+        </article>
     </main>
+    <aside>
+        <section>
+            <h2>&Uacute;ltimas incidencias</h2>
+            <table>
+                <caption>&Uacute;ltimas incidencias activas</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Prioridad</th>
+                        <th scope="col">Acci&oacute;n</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">alta</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">baja</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">media</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">alta</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">media</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </aside>
     <footer>
         <p>Proyecto desarrollado por Jon Xu Jin. Pueden contactar conmigo desde <a href="mailto:jonxu@opendeusto.es?subject=Contacto%20Web">aqu&iacute;</a>.</p>
     </footer>
-
 </body>
 
 </html>

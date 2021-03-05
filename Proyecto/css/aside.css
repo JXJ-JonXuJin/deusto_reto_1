@@ -1,0 +1,31 @@
+/* Para no duplicar codigos y quiero que los asides tengan las mismas apariencias, lo pongo separado para las paginas con asides */
+
+@media only screen and (min-width: 514px) {
+    /* Tablets: */
+    aside {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    /* Escritorio: */
+    aside {
+        float: right;
+        width: 30%;
+    }
+}
+
+aside table {
+    width: 100%;
+}
+
+aside table thead tr th {
+    width: 24%;
+}
+
+aside table tbody tr td a {
+    background: #3F95E0;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+}
