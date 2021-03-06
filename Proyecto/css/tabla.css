@@ -1,10 +1,14 @@
 /* Para no duplicar codigos y quiero que las tablas tengan las mismas apariencias, lo pongo separado para las paginas con tablas */
 
 table,
-tbody th,
+thead th,
 tbody td {
     text-align: center;
     border: 1px solid black;
+}
+
+tr td {
+    height: 1.5rem;
 }
 
 table tbody tr:nth-child(odd) {
