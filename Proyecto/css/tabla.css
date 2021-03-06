@@ -23,6 +23,21 @@ table tbody tr:hover {
     background-color: rgb(39, 215, 238);
 }
 
+table {
+    width: 100%;
+}
+
+aside table thead tr th {
+    width: 24%;
+}
+
+table tbody tr td a {
+    background: #3F95E0;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
 table tfoot tr td {
     text-align: left;
 }

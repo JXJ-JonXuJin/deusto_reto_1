@@ -92,21 +92,6 @@ footer p {
     color: white;
 }
 
-aside table {
-    width: 100%;
-}
-
-aside table thead tr th {
-    width: 24%;
-}
-
-aside table tbody tr td a {
-    background: #3F95E0;
-    color: #fff;
-    text-decoration: none;
-    padding: 0 10px;
-}
-
 .mayus {
     text-transform: uppercase;
 }
