@@ -1,0 +1,96 @@
+main table {
+    width: 100%;
+}
+
+main table thead tr th {
+    min-width: 3em;
+}
+
+main table tbody tr td a {
+    background: #3F95E0;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+#nivel1 td,
+#nivel2 td,
+#nivel3 td {
+    font-style: italic;
+    text-align: left;
+    background: #606163;
+    color: #fff;
+}
+
+.resuelto {
+    background: #3ec98f;
+}
+
+#iresuelto {
+    width: 90px;
+    color: #fff;
+    background: #3ec98f;
+    margin: 5px 0;
+}
+
+#iotros {
+    width: 90px;
+    color: #fff;
+    background: #3F95E0;
+    margin: 5px 0;
+}
+
+aside section ul {
+    list-style: none;
+}
+
+aside section ul li a {
+    text-decoration: none;
+    color: #3F95E0;
+}
+
+@media only screen and (min-width: 1350px) {
+    /* Escritorio: */
+    aside {
+        position: fixed;
+        top: 335px;
+        left: 65%;
+        width: 22.5%;
+        min-height: 450px;
+    }
+}
+
+@media only screen and (max-width: 1470px) {
+    /* Escritorio: */
+    #uincidencia {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 820px) {
+    /* Escritorio: */
+    #uincidencia {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 670px) {
+    /* Escritorio: */
+    #uleyenda {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 570px) {
+    /* Escritorio: */
+    #unav {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    /* Tablets: */
+    #uincidencia {
+        display: block;
+    }
+}

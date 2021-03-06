@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico" sizes="16x16 32x32">
     <title>Wiki de los errores</title>
-    <link rel="stylesheet" href="css/parteFija.css">
+    <link rel="stylesheet" href="css/estructura.css">
     <link rel="stylesheet" href="css/tabla.css">
 </head>
 
@@ -27,8 +27,8 @@
         </div>
     </header>
     <nav>
-        <a href="index.html" target="_self" alt="Incidencias">
-            <img id="banner" src="img/banner.png" alt="Incidencias">
+        <a href="index.html" target="_self">
+            <img id="banner" src="img/wiki.jpg" alt="Wiki">
         </a>
     </nav>
     <main>
@@ -40,32 +40,112 @@
                     <caption>Tabla de Informaci&oacute;n de los errores</caption>
                     <thead>
                         <tr>
-                            <th scope="col">Error</th>
+                            <th scope="col">Errores</th>
                             <th scope="col">Motivo</th>
                             <th scope="col">Soluci&oacute;n</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>300 - 399</td>
-                            <td>Redirecciones</td>
-                            <td>El directorio o los recursos han sido movidos a otra ubicaci&oacute;n. No te preocupes, te redirigiremos a la nueva ruta. Procura usar en un futuro el nuevo enlace.</td>
+                            <td>400</td>
+                            <td>Bad Request</td>
+                            <td>Esta respuesta significa que el servidor no pudo interpretar la solicitud dada una sintaxis inválida.</td>
                         </tr>
                         <tr>
-                            <td>400 - 499</td>
-                            <td>Errores por parte del cliente</td>
-                            <td>El servidor no ha podido procesar su solicitud, revisa los datos proporcionados e int&eacute;ntelo de nuevo. Si el error persiste, contacte con el SAT</td>
+                            <td>401</td>
+                            <td>Unauthorized</td>
+                            <td>Es necesario autenticar para obtener la respuesta solicitada. Esta es similar a 403, pero en este caso, la autenticación es posible.</td>
                         </tr>
                         <tr>
-                            <td>500 - 599</td>
-                            <td>Errores por parte del servidor</td>
-                            <td>Hay un problema con el servidor, por favor, int&eacute;ntelo de nuevo m&aacute;s tarde.</td>
+                            <td>402</td>
+                            <td>Payment Required</td>
+                            <td>Este código de respuesta está reservado para futuros usos. El objetivo inicial de crear este código fue para ser utilizado en sistemas digitales de pagos. Sin embargo, no está siendo usado actualmente.</td>
+                        </tr>
+                        <tr>
+                            <td>403</td>
+                            <td>Forbidden</td>
+                            <td>El cliente no posee los permisos necesarios para cierto contenido, por lo que el servidor está rechazando otorgar una respuesta apropiada.</td>
+                        </tr>
+                        <tr>
+                            <td>404</td>
+                            <td>Not Found</td>
+                            <td>El servidor no pudo encontrar el contenido solicitado. Este código de respuesta es uno de los más famosos dada su alta ocurrencia en la web.</td>
+                        </tr>
+                        <tr>
+                            <td>405</td>
+                            <td>Method Not Allowed</td>
+                            <td>El método solicitado es conocido por el servidor pero ha sido deshabilitado y no puede ser utilizado. Los dos métodos obligatorios, GET y HEAD, nunca deben ser deshabilitados y no deberían retornar este código de error.</td>
+                        </tr>
+                        <tr>
+                            <td>406</td>
+                            <td>Not Acceptable</td>
+                            <td>Esta respuesta es enviada cuando el servidor, después de aplicar una negociación de contenido servidor-impulsado, no encuentra ningún contenido seguido por la criteria dada por el usuario.</td>
+                        </tr>
+                        <tr>
+                            <td>407</td>
+                            <td>Proxy Authentication Required</td>
+                            <td>Esto es similar al código 401, pero la autenticación debe estar hecha a partir de un proxy.</td>
+                        </tr>
+                        <tr>
+                            <td>408</td>
+                            <td>Request Timeout</td>
+                            <td>Esta respuesta es enviada en una conexión inactiva en algunos servidores, incluso sin alguna petición previa por el cliente. Significa que el servidor quiere desconectar esta conexión sin usar. Esta respuesta es muy usada desde
+                                algunos navegadores, como Chrome, Firefox 27+, o IE9, usa mecanismos de pre-conexión HTTP para acelerar la navegación. También hay que tener en cuenta que algunos servidores simplemente desconecta la conexión sin enviar
+                                este mensaje.</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
         </article>
     </main>
+    <aside>
+        <section>
+            <h2>&Uacute;ltimas incidencias</h2>
+            <table>
+                <caption>&Uacute;ltimas incidencias activas</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Prioridad</th>
+                        <th scope="col">Acci&oacute;n</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">alta</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">baja</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">media</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">alta</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>01/01/2021</td>
+                        <td>Error 400</td>
+                        <td class="mayus">media</td>
+                        <td><a href="detalle.html" target="_self">Acceder</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </aside>
     <footer>
         <p>Proyecto desarrollado por Jon Xu Jin. Pueden contactar conmigo desde <a href="mailto:jonxu@opendeusto.es?subject=Contacto%20Web">aqu&iacute;</a>.</p>
     </footer>

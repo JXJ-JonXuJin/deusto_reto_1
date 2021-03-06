@@ -39,13 +39,39 @@ header div ul li:last-child a {
     display: block;
     color: #505961;
     text-decoration: none;
-    transition: all linear 1s .5s;
+    transition: all linear .5s .1s;
 }
 
 header div ul li a:hover {
     background: #3F95E0;
+    border: 5px solid #3F95E0;
     border-radius: 10px;
     color: #fff;
+}
+
+@media only screen and (min-width: 514px) {
+    /* Tablets: */
+    main {
+        display: inline-block;
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    /* Escritorio: */
+    main {
+        display: inline-block;
+        width: 65%;
+        min-height: 450px;
+    }
+    aside {
+        float: right;
+        width: 30%;
+        min-height: 450px;
+    }
 }
 
 nav {
@@ -54,7 +80,7 @@ nav {
 
 #banner {
     margin: 1rem;
-    width: 100%;
+    width: 95%;
     height: 200px;
 }
 
@@ -64,4 +90,23 @@ footer p {
     background: #85c7ab;
     text-align: center;
     color: white;
+}
+
+aside table {
+    width: 100%;
+}
+
+aside table thead tr th {
+    width: 24%;
+}
+
+aside table tbody tr td a {
+    background: #3F95E0;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.mayus {
+    text-transform: uppercase;
 }

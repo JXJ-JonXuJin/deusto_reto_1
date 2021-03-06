@@ -1,8 +1,8 @@
 /* Para no duplicar codigos y quiero que las tablas tengan las mismas apariencias, lo pongo separado para las paginas con tablas */
 
 table,
-th,
-td {
+tbody th,
+tbody td {
     text-align: center;
     border: 1px solid black;
 }
@@ -17,4 +17,12 @@ table tbody tr:nth-child(even) {
 
 table tbody tr:hover {
     background-color: rgb(39, 215, 238);
+}
+
+table tfoot tr td {
+    text-align: left;
+}
+
+#total {
+    text-align: center;
 }
